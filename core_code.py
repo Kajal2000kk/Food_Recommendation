@@ -14,9 +14,9 @@ import string
 
 class Recommender:
     def __init__(self):
-        self.df = pd.read_csv('C:/Users/Admin/Desktop/New folder/IPYNB File/data.csv')
+        self.df = pd.read_csv('Food_Recommendation/IPYNB File/data.csv')
         self.df['Describe'] = self.df['Describe'].apply(self.text_cleaning)
-        self.rating = pd.read_csv('C:/Users/Admin/Desktop/New folder/IPYNB File/ratings.csv')
+        self.rating = pd.read_csv('Food_Recommendation/IPYNB File/ratings.csv')
         self.rating = self.rating[:511]
 
     def unique_dishes(self):
