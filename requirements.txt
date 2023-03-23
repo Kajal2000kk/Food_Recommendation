@@ -1,5 +1,4 @@
 streamlit
-sib_api_v3_sdk
 pandas
 numpy
 matplotlib
