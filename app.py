@@ -6,6 +6,13 @@ t = test2.result()
 
 foods = t.food()
 
+uploaded_file = st.file_uploader(
+    "Choose your database", accept_multiple_files=False)
+if uploaded_file is not None:
+    file_name = uploaded_file
+else:
+    file_name = "DatabaseSample.xlsx"
+
 import base64
 
 @st.cache(allow_output_mutation=True)
@@ -14,12 +21,7 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-uploaded_file = st.file_uploader(
-    "Choose your database", accept_multiple_files=False)
-if uploaded_file is not None:
-    file_name = uploaded_file
-else:
-    file_name = "DatabaseSample.xlsx"
+
     
     
 def set_png_as_page_bg(png_file):
