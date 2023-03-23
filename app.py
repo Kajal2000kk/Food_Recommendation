@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 import test2
 from PIL import Image
@@ -6,12 +7,7 @@ t = test2.result()
 
 foods = t.food()
 
-uploaded_file = st.file_uploader(
-    "Choose your database", accept_multiple_files=False)
-if uploaded_file is not None:
-    file_name = uploaded_file
-else:
-    file_name = "DatabaseSample.csv"
+
 
 import base64
 
@@ -40,6 +36,12 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('C:/Users/Admin/Desktop/New folder/imgs/img2.jfif')
 
+uploaded_file = st.file_uploader(
+    "Choose your database", accept_multiple_files=False)
+if uploaded_file is not None:
+    file_name = uploaded_file
+else:
+    file_name = "DatabaseSample.csv"
 
 
 favicon = Image.open("C:/Users/Admin/Desktop/New folder/imgs/logo.png")
