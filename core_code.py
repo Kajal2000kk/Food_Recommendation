@@ -11,12 +11,22 @@ from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 import re
 import string
+import os.path
+
+dir_name = os.path.abspath(os.path.dirname(__file__))
+location = os.path.join(dir_name, 'data.csv')
+data_locations = pd.read_csv(location)
+data_locations = data_locations[["Food_ID", "Name", "C_Type","Veg_Non","Describe"]]
+
+location2 = os.path.join(dir_name, 'ratings.csv')
+ratings_locations=pd.read_csv(location2)
+ratings_locations=ratings_locations[["User_ID","Food_ID","Rating"]]
 
 class Recommender:
     def __init__(self):
-        self.df = pd.read_csv('Food_Recommendation/IPYNB File/data.csv')
+        self.df = data_locations
         self.df['Describe'] = self.df['Describe'].apply(self.text_cleaning)
-        self.rating = pd.read_csv('Food_Recommendation/IPYNB File/ratings.csv')
+        self.rating = ratings_locations
         self.rating = self.rating[:511]
 
     def unique_dishes(self):
