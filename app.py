@@ -34,7 +34,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('C:/Users/Admin/Desktop/New folder/imgs/img2.jfif')
+set_png_as_page_bg('Food_Recommendation/imgs/img2.jfif')
 
 uploaded_file = st.file_uploader(
     "Choose your database", accept_multiple_files=False)
@@ -44,7 +44,7 @@ else:
     file_name = "DatabaseSample.csv"
 
 
-favicon = Image.open("C:/Users/Admin/Desktop/New folder/imgs/logo.png")
+favicon = Image.open("Food_Recommendation/imgs/logo.png")
 # st.set_page_config(page_title='Tasty Foods', page_icon = favicon)
 
 st.markdown("<h1 style='text-align: center;'>Tasty Foods </h1>", unsafe_allow_html=True)
