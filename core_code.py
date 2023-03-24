@@ -18,7 +18,7 @@ data_csv = Path(__file__).parents[1] / 'IPYNB File/data.csv'
 
 dir_name = os.path.abspath(os.path.dirname(__file__))
 location = os.path.join(dir_name, 'data.csv')
-data_locations = pd.read_csv(*******************************************)
+data_locations = pd.read_csv(location)
 data_locations = data_locations[["Food_ID", "Name", "C_Type","Veg_Non","Describe"]]
 
 location2 = os.path.join(dir_name, 'ratings.csv')
