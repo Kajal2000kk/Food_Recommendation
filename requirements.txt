@@ -6,5 +6,4 @@ seaborn
 sklearn
 scikit-learn
 scipy
-test2
-core_code
+
