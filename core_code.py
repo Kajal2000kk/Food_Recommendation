@@ -11,7 +11,7 @@ from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
 import re
 import string
-import os.path
+import os
 
 
 # data_csv = os.path.abspath(__file__).parents[1] / 'IPYNB File/data.csv'
