@@ -6,4 +6,4 @@ seaborn
 scikit-learn
 scipy
 ipython
-
+zipp==3.7.0
