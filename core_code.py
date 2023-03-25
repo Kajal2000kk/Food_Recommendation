@@ -12,10 +12,9 @@ from sklearn.neighbors import NearestNeighbors
 import re
 import string
 import os.path
-import IPython
-from IPython import path as Path
 
-data_csv = Path(__file__).parents[1] / 'IPYNB File/data.csv'
+
+data_csv = os.path(__file__).parents[1] / 'IPYNB File/data.csv'
 
 # dir_name = os.path.abspath(os.path.dirname(data_csv))
 # location = os.path.join(dir_name, 'data.csv')
