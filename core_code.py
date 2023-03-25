@@ -16,14 +16,15 @@ from pathlib import path
 
 data_csv = Path(__file__).parents[1] / 'IPYNB File/data.csv'
 
-dir_name = os.path.abspath(os.path.dirname(__file__))
+dir_name = os.path.abspath(os.path.dirname(data_csv))
 location = os.path.join(dir_name, 'data.csv')
-data_locations = pd.read_csv(********************)
-data_locations = data_locations[["Food_ID", "Name", "C_Type","Veg_Non","Describe"]]
+data_locations = pd.read_csv(location)
 
+ratings_csv = Path(__file__).parents[1] / 'IPYNB File/ratings.csv'
+dir_name2 = os.path.abspath(os.path.dirname(ratings_csv))
 location2 = os.path.join(dir_name, 'ratings.csv')
 ratings_locations=pd.read_csv(location2)
-ratings_locations=ratings_locations[["User_ID","Food_ID","Rating"]]
+
 
 class Recommender:
     def __init__(self):
