@@ -12,6 +12,7 @@ from sklearn.neighbors import NearestNeighbors
 import re
 import string
 import os
+import zip
 
 
 # data_csv = os.path.abspath(__file__).parents[1] / 'IPYNB File/data.csv'
@@ -24,7 +25,12 @@ import os
 # # dir_name2 = os.path.abspath(os.path.dirname(ratings_csv))
 # # location2 = os.path.join(dir_name, 'ratings.csv')
 # ratings_locations=pd.read_csv(location2)
-path = os.path.dirname(__file__)
+path = r"\Users\Utilisateur\Downloads\Data_P7.zip"  #### le chemin vers le répertoire zip des données
+with zipfile.ZipFile(path, "r") as zfile:
+    dfs = {name[:-4]: pd.read_csv(zfile.open(name), encoding='cp1252')
+           for name in zfile.namelist()
+           }
+    zfile.close()
 
 class Recommender:
     def __init__(self):
