@@ -24,7 +24,7 @@ import os
 # # dir_name2 = os.path.abspath(os.path.dirname(ratings_csv))
 # # location2 = os.path.join(dir_name, 'ratings.csv')
 # ratings_locations=pd.read_csv(location2)
-
+path = os.path.dirname(__file__)
 
 class Recommender:
     def __init__(self):
