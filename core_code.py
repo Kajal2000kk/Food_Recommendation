@@ -12,7 +12,7 @@ from sklearn.neighbors import NearestNeighbors
 import re
 import string
 import os
-import zip
+import zipfile
 
 
 # data_csv = os.path.abspath(__file__).parents[1] / 'IPYNB File/data.csv'
