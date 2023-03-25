@@ -12,7 +12,7 @@ from sklearn.neighbors import NearestNeighbors
 import re
 import string
 import os.path
-from pathlib import path
+from IPython.external.path import path as Path
 
 data_csv = Path(__file__).parents[1] / 'IPYNB File/data.csv'
 
