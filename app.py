@@ -1,21 +1,12 @@
-import pandas as pd
 import streamlit as st
 import test2
 from PIL import Image
-import os.path
 
 t = test2.result()
 
 foods = t.food()
 
-
-dir_name = os.path.abspath(os.path.dirname(__file__))
-imglocation = os.path.join(dir_name, 'img2.jfif')
-
-imglocation2 = os.path.join(dir_name, 'logo.png')
-
-
-
+import base64
 
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
@@ -23,9 +14,6 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-
-    
-    
 def set_png_as_page_bg(png_file):
     bin_str = get_base64_of_bin_file(png_file)
     page_bg_img = '''
@@ -40,17 +28,11 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg(imglocation)
-
-uploaded_file = st.file_uploader(
-    "Choose your database", accept_multiple_files=False)
-if uploaded_file is not None:
-    file_name = uploaded_file
-else:
-    file_name = "DatabaseSample.csv"
+set_png_as_page_bg('imgs/img2.jfif')
 
 
-favicon = Image.open(imglocation2)
+
+favicon = Image.open("imgs/logo.png")
 # st.set_page_config(page_title='Tasty Foods', page_icon = favicon)
 
 st.markdown("<h1 style='text-align: center;'>Tasty Foods </h1>", unsafe_allow_html=True)
@@ -90,4 +72,3 @@ with c3:
     for index, ele in enumerate(m2):
         st.write(index, ele.title())
     st.write("------------------")
-
