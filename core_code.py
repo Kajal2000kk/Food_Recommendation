@@ -13,7 +13,7 @@ import re
 import string
 import os.path
 import IPython
-from IPython.external.path import path as Path
+from IPython import path as Path
 
 data_csv = Path(__file__).parents[1] / 'IPYNB File/data.csv'
 
