@@ -25,7 +25,7 @@ import zipfile
 # # dir_name2 = os.path.abspath(os.path.dirname(ratings_csv))
 # # location2 = os.path.join(dir_name, 'ratings.csv')
 # ratings_locations=pd.read_csv(location2)
-path = r"D:\downlod\dataset.zip"  #### le chemin vers le répertoire zip des données
+path = r"D:\Downloads\dataset.zip"  #### le chemin vers le répertoire zip des données
 with zipfile.ZipFile(path, "r") as zfile:
     dfs = {name[:-4]: pd.read_csv(zfile.open(name), encoding='cp1252')
            for name in zfile.namelist()
