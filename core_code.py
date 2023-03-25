@@ -25,7 +25,7 @@ import zipfile
 # # dir_name2 = os.path.abspath(os.path.dirname(ratings_csv))
 # # location2 = os.path.join(dir_name, 'ratings.csv')
 # ratings_locations=pd.read_csv(location2)
-path = r"\Users\Utilisateur\Downloads\Data_P7.zip"  #### le chemin vers le répertoire zip des données
+path = r"D:\downlod\dataset.zip"  #### le chemin vers le répertoire zip des données
 with zipfile.ZipFile(path, "r") as zfile:
     dfs = {name[:-4]: pd.read_csv(zfile.open(name), encoding='cp1252')
            for name in zfile.namelist()
@@ -34,9 +34,9 @@ with zipfile.ZipFile(path, "r") as zfile:
 
 class Recommender:
     def __init__(self):
-        self.df = pd.read_csv('/IPYNB File/data.csv')
+        self.df = pd.read_csv('data.csv')
         self.df['Describe'] = self.df['Describe'].apply(self.text_cleaning)
-        self.rating = pd.read_csv('/IPYNB File/ratings.csv')
+        self.rating = pd.read_csv('ratings.csv')
         self.rating = self.rating[:511]
 
     def unique_dishes(self):
