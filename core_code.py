@@ -14,7 +14,7 @@ import string
 import os.path
 
 
-data_csv = os.path(__file__).parents[1] / 'IPYNB File/data.csv'
+data_csv = os.path.abspath(__file__).parents[1] / 'IPYNB File/data.csv'
 
 # dir_name = os.path.abspath(os.path.dirname(data_csv))
 # location = os.path.join(dir_name, 'data.csv')
