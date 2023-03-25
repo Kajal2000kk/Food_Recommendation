@@ -6,5 +6,5 @@ seaborn
 sklearn
 scikit-learn
 scipy
-ipython
+ipython3
 
