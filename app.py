@@ -6,10 +6,7 @@ from PIL import Image
 st.write("check out this [link](https://diet-recommendation-system.streamlit.app/Diet_Recommendation)")
 t = test2.result()
 
-st.set_page_config(
-    page_title="Hello",
-    page_icon="👋",
-)
+
 
 st.write("# Welcome to Diet Recommendation System! 👋")
 
