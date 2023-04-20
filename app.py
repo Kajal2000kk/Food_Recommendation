@@ -2,6 +2,8 @@ import streamlit as st
 import test2
 from PIL import Image
 
+
+st.write("check out this [link](https://diet-recommendation-system.streamlit.app/Diet_Recommendation)")
 t = test2.result()
 
 foods = t.food()
