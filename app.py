@@ -1,7 +1,7 @@
 import streamlit as st
 import test2
 from PIL import Image
-
+test2=t()
 
 foods = t.food()
 
