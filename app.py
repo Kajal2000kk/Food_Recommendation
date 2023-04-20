@@ -32,7 +32,7 @@ set_png_as_page_bg('imgs/img2.jfif')
 
 
 
- favicon = Image.open("imgs/logo.png")
+# favicon = Image.open("imgs/logo.png")
 # st.set_page_config(page_title='Tasty Foods', page_icon = favicon)
 
 st.markdown("<h1 style='text-align: center;'>Tasty Foods </h1>", unsafe_allow_html=True)
