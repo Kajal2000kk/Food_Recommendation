@@ -1,6 +1,7 @@
 import streamlit as st
 import test2
 from PIL import Image
+import base64
 t = test2.result()
 
 foods = t.food()
@@ -16,7 +17,7 @@ st.markdown(
     A diet recommendation web application using content-based approach with Scikit-Learn, FastAPI and Streamlit.
     You can find more details and the whole project on my [repo](https://github.com/zakaria-narjis/Diet-Recommendation-System).
     """
-import base64
+#import base64
 
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
