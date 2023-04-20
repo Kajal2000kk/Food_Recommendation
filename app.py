@@ -3,9 +3,9 @@ import test2
 from PIL import Image
 import base64
 t = test2.result()
-st.sidebar.write("check out this [link](https://diet-recommendation-system.streamlit.app/Diet_Recommendation)")
+st.sidebar.success("Hello")
+st.sidebar.write("click [recommendation-diet](https://diet-recommendation-system.streamlit.app/Diet_Recommendation)")
 st.write("# Welcome to Diet Recommendation System! 👋")
-
 st.sidebar.success("Select a recommendation app.")
 
 st.markdown(
