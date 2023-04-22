@@ -5,25 +5,21 @@ st.sidebar.write("click [recommendation-diet](https://github.com/Kajal2000kk/Foo
 st.write("# Welcome to Diet Recommendation System! 👋")
 st.sidebar.success("Select a recommendation app.")
 
+# Create a page dropdown 
+page = st.selectbox("Choose your page", ["main_page", "Page_2", "Page_3"]) 
+if page == "main_page":
+    # Display details of page 1
+elif page == "Page_2":
+    # Display details of page_2
+elif page == "Page_3":
+    # Display details of page_3
+
 st.markdown(
     """
     A diet recommendation web application using content-based approach with Scikit-Learn, FastAPI and Streamlit.
     You can find more details and the whole project on my [repo](https://github.com/Kajal2000kk/Food_Recommendation).
     """)
-def main_page():
-    st.markdown("# Page_2 ")
-    st.sidebar.markdown("# Page_2 ")
-def page_2():
-    st.markdown("# Page_2 ❄️")
-    st.sidebar.markdown("# Page_2 ❄️")
-def page_3():
-    st.markdown("# Page_2 ")
-    st.sidebar.markdown("# Page_2 ")
-page_names_to_funcs = {
-     "Main Page": main_page,
-     "Page_2": page_2,
-     "Page_3": page_3,
-}
+
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
