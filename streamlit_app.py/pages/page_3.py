@@ -7,7 +7,7 @@ from sklearn.linear_model import LinearRegression
 import numpy as np 
 from scipy.sparse import csr_matrix
 from sklearn.neighbors import NearestNeighbors
-
+st.set_page_config(page_title="Custom Food Recommendation", page_icon="🔍",layout="wide")
 st.title("Food Recommendation System")
 st.text("Let us help you with ordering")
 st.image("deply/foood.jpg")
