@@ -8,8 +8,8 @@ def main_page():
     st.sidebar.markdown("# Main page 🎈")
 
 def page2():
-    st.markdown("# Page 2 ❄️")
-    st.sidebar.markdown("# Page 2 ❄️")
+    st.markdown("# Page_2 ❄️")
+    st.sidebar.markdown("# Page_2 ❄️")
 
 def page3():
     st.markdown("# Page 3 🎉")
