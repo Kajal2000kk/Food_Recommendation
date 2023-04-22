@@ -17,8 +17,8 @@ def page_3():
 
 page_names_to_funcs = {
     "Main Page": main_page,
-    "Page_2": page2,
-    "Page_3": page3,
+    "Page_2": page_2,
+    "Page_3": page_3,
 }
 
 selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
