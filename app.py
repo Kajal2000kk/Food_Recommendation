@@ -7,20 +7,26 @@ st.sidebar.write("Hello")
 # Contents of ~/my_app/main_page.py
 import streamlit as st
 
-st.markdown("# Main page 🎈")
-st.sidebar.markdown("# Main page 🎈")
+def main_page():
+    st.markdown("# Main page 🎈")
+    st.sidebar.markdown("# Main page 🎈")
 
-# Contents of ~/my_app/pages/page_2.py
-import streamlit as st
+def page2():
+    st.markdown("# Page 2 ❄️")
+    st.sidebar.markdown("# Page 2 ❄️")
 
-st.markdown("# Page 2 ❄️")
-st.sidebar.markdown("# Page 2 ❄️")
+def page3():
+    st.markdown("# Page 3 🎉")
+    st.sidebar.markdown("# Page 3 🎉")
 
-# Contents of ~/my_app/pages/page_3.py
-import streamlit as st
+page_names_to_funcs = {
+    "Main Page": main_page,
+    "Page 2": page2,
+    "Page 3": page3,
+}
 
-st.markdown("# Page 3 🎉")
-st.sidebar.markdown("# Page 3 🎉")
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
 # st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
 # st.write("# Welcome to Diet Recommendation System! 👋")
 # st.sidebar.success("Select a recommendation app.")
