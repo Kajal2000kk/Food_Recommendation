@@ -2,10 +2,17 @@ import streamlit as st
 import test2
 from PIL import Image
 import base64
-st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide")
-# def page_2():
-st.markdown("# Page_2 ❄️")
-st.sidebar.markdown("# Page_2 ❄️")
+def page_2():
+    st.markdown("# Page_2 ❄️")
+    st.sidebar.markdown("# Page_2 ❄️")
+page_names_to_funcs = {
+#    "Main Page": main_page,
+     "Page_2": page_2,
+#     "Page_3": page_3,
+}
+
+selected_page = st.sidebar.selectbox("Select a page", page_names_to_funcs.keys())
+page_names_to_funcs[selected_page]()
 t = test2.result()
 # st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
 # st.write("# Welcome to Diet Recommendation System! 👋")
