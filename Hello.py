@@ -1,7 +1,6 @@
 import streamlit as st
 from streamlit.logger import get_logger
 import base64
-LOGGER = get_logger(__name__)
 @st.cache(allow_output_mutation=True)
 def get_base64_of_bin_file(bin_file):
     with open(bin_file, 'rb') as f:
@@ -24,14 +23,14 @@ def set_png_as_page_bg(png_file):
 
 set_png_as_page_bg('imgs/img4.jpg')
 
-
+LOGGER = get_logger(__name__)
 def run():
     st.set_page_config(
         page_title="Hello",
         page_icon="👋",
     )
 
-    st.write("# Welcome to Streamlit! 👋")
+    st.write("# Welcome to Food Solutions! 👋")
 
     st.sidebar.success("Select a demo above.")
 
