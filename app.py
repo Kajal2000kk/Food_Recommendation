@@ -3,7 +3,7 @@ import test2
 from PIL import Image
 import base64
 t = test2.result()
-st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
+st.sidebar.write("click [recommendation-diet](https://github.com/Kajal2000kk/Food_Recommendation)")
 st.write("# Welcome to Diet Recommendation System! 👋")
 st.sidebar.success("Select a recommendation app.")
 
