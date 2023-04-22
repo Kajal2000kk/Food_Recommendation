@@ -2,6 +2,8 @@ import streamlit as st
 import test2
 from PIL import Image
 import base64
+st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide")
+
 t = test2.result()
 # st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
 # st.write("# Welcome to Diet Recommendation System! 👋")
