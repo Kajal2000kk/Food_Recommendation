@@ -3,9 +3,7 @@ st.sidebar.write("Hello")
 # Contents of ~/my_app/main_page.py
 import streamlit as st
 
-st.set_page_config(page_title = "This is a Multipage WebApp")
-st.title("This is the Home Page Geeks.")
-st.sidebar.success("Select Any Page from here")
+st.set_page_config(page_title="Automatic Diet Recommendation", page_icon="💪",layout="wide")
 def main_page():
     st.markdown("# Main page 🎈")
     st.sidebar.markdown("# Main page 🎈")
