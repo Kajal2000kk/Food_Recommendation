@@ -12,6 +12,11 @@ def run():
 
     st.sidebar.success("Select a demo above.")
 
+    st.markdown(
+        """
+    We are the foodie who love to eat and explore different food but we are engineers also so here is combination of both.
+    so people who love to eat here we have complete soltion for them for food recommendation.
+    """
     )
 
 
