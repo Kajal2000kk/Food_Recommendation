@@ -12,10 +12,6 @@ def run():
 
     st.sidebar.success("Select a demo above.")
 
-    st.markdown(
-        """
-       this is testing.
-    """
     )
 
 
