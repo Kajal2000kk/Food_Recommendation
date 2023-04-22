@@ -7,12 +7,12 @@ def get_base64_of_bin_file(bin_file):
         data = f.read()
     return base64.b64encode(data).decode()
 
-def set_png_as_page_bg(png_file):
-    bin_str = get_base64_of_bin_file(png_file)
+def set_jpg_as_page_bg(jpg_file):
+    bin_str = get_base64_of_bin_file(jpg_file)
     page_bg_img = '''
     <style>
     .stApp {
-        background-image: url("data:image/png;base64,%s");
+        background-image: url("data:image/jpg;base64,%s");
         background-size: cover;
     }
     </style>
@@ -21,7 +21,7 @@ def set_png_as_page_bg(png_file):
     st.markdown(page_bg_img, unsafe_allow_html=True)
     return
 
-set_png_as_page_bg('imgs/img4.jpg')
+set_jpg_as_page_bg('imgs/img4.jpg')
 
 LOGGER = get_logger(__name__)
 def run():
