@@ -4,15 +4,32 @@ from PIL import Image
 import base64
 t = test2.result()
 st.sidebar.write("Hello")
-st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
-st.write("# Welcome to Diet Recommendation System! 👋")
-st.sidebar.success("Select a recommendation app.")
+# Contents of ~/my_app/main_page.py
+import streamlit as st
 
-st.markdown(
-    """
-    A diet recommendation web application using content-based approach with Scikit-Learn, FastAPI and Streamlit.
-    You can find more details and the whole project on my [repo](https://github.com/zakaria-narjis/Diet-Recommendation-System).
-    """)
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
+
+# Contents of ~/my_app/pages/page_2.py
+import streamlit as st
+
+st.markdown("# Page 2 ❄️")
+st.sidebar.markdown("# Page 2 ❄️")
+
+# Contents of ~/my_app/pages/page_3.py
+import streamlit as st
+
+st.markdown("# Page 3 🎉")
+st.sidebar.markdown("# Page 3 🎉")
+# st.sidebar.write("click [recommendation-diet](https://Kajal2000kk/Food_Recommendation)")
+# st.write("# Welcome to Diet Recommendation System! 👋")
+# st.sidebar.success("Select a recommendation app.")
+
+# st.markdown(
+#     """
+#     A diet recommendation web application using content-based approach with Scikit-Learn, FastAPI and Streamlit.
+#     You can find more details and the whole project on my [repo](https://github.com/zakaria-narjis/Diet-Recommendation-System).
+#     """)
 foods = t.food()
 
 @st.cache(allow_output_mutation=True)
